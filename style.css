@@ -1,0 +1,224 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles - Element selector */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Container class for consistent spacing */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles - ID selector */
+#header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Section styles - Class selector */
+.section {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: white;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    border-left: 5px solid #6a11cb;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2575fc;
+    position: relative;
+    display: inline-block;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    bottom: -10px;
+    left: 25%;
+    border-radius: 2px;
+}
+
+/* About section specific styles */
+#about p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    padding: 0 20px;
+}
+
+/* Profile image styling - Class selector */
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #f8f9fa;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: #e0e7ff;
+}
+
+/* Skills section specific styles */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 2rem auto;
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+#skills ul li {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#skills ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact section specific styles */
+#contact {
+    background-color: #f8f9fa;
+    border-left: 5px solid #2575fc;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+#contact a {
+    color: #2575fc;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#contact a:hover {
+    background-color: #e0e7ff;
+    color: #6a11cb;
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .section {
+        padding: 3rem 0;
+        margin: 1.5rem auto;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    #skills ul li {
+        padding: 10px 20px;
+    }
+}
